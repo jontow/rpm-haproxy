@@ -19,7 +19,7 @@ License: GPL
 Group: System Environment/Daemons
 URL: http://www.haproxy.org/
 Source0: http://www.haproxy.org/download/1.8/src/%{name}-%{version}.tar.gz
-Source1: %{name}.cfg
+Source1: %{name}.cfg.example
 %{?amzn1:Source2: %{name}.init}
 %{?el6:Source2: %{name}.init}
 %{?el7:Source2: %{name}.service}
@@ -170,7 +170,7 @@ fi
 %endif
 %dir %{_sysconfdir}/%{name}
 %{_sysconfdir}/%{name}/errors
-%attr(0644,root,root) %config(noreplace) %{_sysconfdir}/%{name}/%{name}.cfg
+%attr(0644,root,root) %config(noreplace) %{_sysconfdir}/%{name}/%{name}.cfg.example
 %attr(0644,root,root) %config %{_sysconfdir}/logrotate.d/%{name}
 %attr(0644,root,root) %config %{_sysconfdir}/rsyslog.d/49-%{name}.conf
 
